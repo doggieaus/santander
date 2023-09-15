@@ -85,8 +85,10 @@
             <li>Business Banking</li>
             <li>Loans</li>
             <li>Investments</li>
+            <li><a href="#" id="transferLinkMenu" class="white-link">Transfer</a></li> <!-- Transfer link added to the menu bar -->
         </ul>
     </div>
+    
     <div class="popup-container" id="popupContainer">
         <!-- First popup for transfer details -->
         <div class="popup" id="transferPopup">
@@ -162,8 +164,11 @@
             }
         }
     
-        // Event listener to open the first popup when "Transfer" is clicked
+        // Event listener to open the first popup when "Transfer" in the navbar is clicked
         document.getElementById("transferLink").addEventListener("click", openPopup);
+    
+        // Event listener to open the first popup when "Transfer" in the menu bar is clicked
+        document.getElementById("transferLinkMenu").addEventListener("click", openPopup);
     </script>
     
 </body>

@@ -170,4 +170,44 @@ body {
             border-radius: 50%; /* Creates a circular shape */
             object-fit: cover; /* Ensures the image fills the circular space */
         }
+
+        /* Existing CSS styles */
+
+/* Style for smaller screens */
+@media (max-width: 767px) {
+    .navbar {
+        height: 6cm; /* Set the navbar height to 6cm for smaller screens */
+        flex-direction: column; /* Stack components vertically on smaller screens */
+        align-items: center; /* Center components vertically on smaller screens */
+        padding: 10px; /* Adjust padding as needed */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack list items vertically on smaller screens */
+        align-items: center; /* Center list items horizontally on smaller screens */
+    }
+
+    .navbar ul li {
+        margin-right: 0; /* Remove right margin for list items on smaller screens */
+        margin-bottom: 10px; /* Add bottom margin for list items on smaller screens */
+    }
+
+    .account-info {
+        margin-top: 10px; /* Add top margin for the account info section on smaller screens */
+    }
+
+    .account-balance {
+        font-size: 14px; /* Adjust font size for account balance on smaller screens */
+        margin-right: 0; /* Remove right margin for account balance on smaller screens */
+    }
+
+    .profile {
+        width: 60px; /* Adjust profile image size for smaller screens */
+        height: 60px; /* Adjust profile image size for smaller screens */
+    }
+}
+
+/* Continue with your existing CSS styles */
+
+
         
