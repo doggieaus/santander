@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santander | Log on</title>
+    <link rel="icon" href="img/titlebarsantander.png" type="image/png">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="img/santander.png" alt="Logo" />
+      <div class="signup-link">
+        <a href="signup.html">Don't have Online Banking? <span>Sign Up</span></a>
+      </div>
+    </div>
+    
+
+    <div class="container">
+      <div class="login-container">
+        <h2 class="login-header">Log on to your Business Online Banking</h2>
+        <form id="loginForm" action="#" method="post">
+          <div class="form-group">
+            <label for="username">Personal ID
+              <a href="#" class="forgotten-link" style="display: inline-block; margin-left: 3cm">Forgotten ID?</a>
+            </label>
+            <input type="text" id="username" name="username" required style="width: 300px; height: 40px" />
+          </div>
+          
+          <!-- <div class="form-group">
+            <label for="username">Personal ID
+              <a href="#" class="forgotten-link" style="display: inline-block; margin-left: 3cm">Forgotten ID?</a>
+            </label>
+            <input type="text" id="username" name="username" required style="width: 300px; height: 40px"/>
+            Adjust the width as needed
+          </div> -->
+          <div class="form-group">
+            <label for="password">Security number</label>
+            <p class="small-text">
+              You may know this as your 5 digit registration
+            </p>
+            <p class="small-text">Number or Custom PIN</p>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              style="width: 300px; font-size: 35px"
+              placeholder="• • • • •"
+            />
+            <div class="checkbox-container">
+              <label for="rememberId" style="display: inline-block; vertical-align: top;">
+                  <input
+                      type="checkbox"
+                      id="rememberId"
+                      name="rememberId"
+                      style="display: inline-block; transform: scale(1.5); margin-right: 5px; vertical-align: middle;"
+                  />
+                  Remember ID
+              </label>
+              <label for="terms" style="display: inline-block; vertical-align: top;">
+                  <input
+                      type="checkbox"
+                      id="terms"
+                      name="terms"
+                      style="display: inline-block; transform: scale(1.5); margin-right: 5px; vertical-align: middle;"
+                  />
+                  I'm using public or shared device
+              </label>
+          </div>
+            <!-- Adjust the width as needed -->
+          </div>
+          <!-- <div class="form-group">
+            <label for="rememberId" style="display: inline-block; vertical-align: right">
+              <input
+                type="checkbox"
+                id="rememberId"
+                name="rememberId"
+                style="display: inline-block; transform: scale(1.5)"
+              />
+              Remember ID
+            </label>
+            <input
+              type="checkbox"
+              id="rememberId"
+              name="rememberId"
+              style="display: inline-block; transform: scale(1.5)"
+            />
+          </div> -->
+          <div class="form-group">
+            <input type="submit" value="Log on" style="width: 300px" />
+          </div>
+          <div class="form-group">
+            <a href="#" class="forgotten-link" style="color: red;">Forgotten details?</a>
+          </div>
+        </form>
+      </div>
+      <div class="image-container"></div>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="#">Online Bank Guarantee</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Security & Privacy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Legal</a>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+    
+          // Basic validation (you can replace this with your own logic)
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+    
+          if (username === "Facebook20012" && password === "Barbara01") {
+            // Redirect to LandingPage.html
+            window.location.href = "LandingPage.html";
+          } else {
+            alert("Login failed. Please check your credentials.");
+          }
+        });
+    </script>
+    
+  </body>
+</html>

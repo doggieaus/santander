@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santander | Home</title>
+    <link rel="icon" href="img/titlebarsantander.png" type="image/png">
+    <link rel="stylesheet" href="css/LandingPage.css">
+    <style>
+        /* Add this CSS to align the navbar ul to the left with padding and add account balance and profile */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Space items horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox to align items horizontally */
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .account-info {
+            display: flex;
+            align-items: center; /* Center vertically */
+        }
+
+        .account-balance {
+            color: white;
+            margin-right: 10px;
+        }
+
+        .profile {
+            width: 30px; /* Adjust the profile image size as needed */
+            height: 30px; /* Adjust the profile image size as needed */
+            border-radius: 50%; /* Create a circular profile image */
+            background-color: #333; /* Placeholder color for the profile image */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="img/santander.png" alt="Bank Logo"> <!-- Adjust width and height as needed -->
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li><a href="#" id="transferLink" class="white-link">Transfer</a></li>
+        </ul>
+        <div class="account-info">
+            <div class="account-balance">£450,000.00</div> <!-- Add your account balance value here -->
+            <div class="profile"></div> <!-- You can add a profile image here -->
+        </div>
+    </div>
+    <div class="header">
+        <h1 style="color: red;">Welcome to Santander</h1>
+        <p>Your Trusted Financial Partner</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Santander Bank, N.A. is a global financial institution with roots dating back to 1857. 
+                As part of Banco Santander, one of the world's largest banks, we offer a wide range of 
+                financial services to individuals, businesses, and corporate clients. Our commitment to 
+                community engagement, sustainability, and corporate responsibility underscores our dedication
+                 to making a positive impact on society. With a focus on customer service, we provide modern digital 
+                 banking solutions while upholding the highest standards of regulatory compliance. Discover how Santander Bank 
+                 can meet your financial needs and aspirations..</p>
+        </div>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li>Personal Banking</li>
+            <li>Business Banking</li>
+            <li>Loans</li>
+            <li>Investments</li>
+        </ul>
+    </div>
+    <div class="popup-container" id="popupContainer">
+        <!-- First popup for transfer details -->
+        <div class="popup" id="transferPopup">
+            <h2><a href="#" id="tfLink">Transfer Funds</a></h2>
+            <form id="transferForm">
+                <input type="text" placeholder="Account Number" id="accountNumber">
+                <input type="text" placeholder="Sort Code" id="destinationBank">
+                <button type="button" onclick="closePopup()">Cancel</button>
+                <button type="button" onclick="openAuthPopup()">Authenticate</button>
+            </form>
+        </div>
+        
+        <!-- Second popup for authentication -->
+        <div class="popup" id="authPopup" style="display: none;">
+            <h2><a href="#" id="auth-Link"><h2>Authentication Code</a></h2>
+            <form id="transferForm">
+                <input type="text" placeholder="Authentication Code" id="authCode">
+                <button type="button" onclick="closeAuthPopup()">Cancel</button>
+                <button type="button" onclick="performTransfer()">Transfer</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions to handle the popup form
+    
+        // Function to open the popup form
+        function openPopup() {
+            document.getElementById("popupContainer").style.display = "flex";
+        }
+    
+        // Function to close the popup form
+        function closePopup() {
+            document.getElementById("popupContainer").style.display = "none";
+        }
+    
+        // Function to open the authentication popup after entering transfer details
+        function openAuthPopup() {
+            // Get the values from the input fields in the first popup
+            var accountNumber = document.getElementById("accountNumber").value;
+            var destinationBank = document.getElementById("destinationBank").value;
+    
+            // Check if either field is empty
+            if (accountNumber === "" || destinationBank === "") {
+                alert("Please input the necessary details.");
+            } else {
+                document.getElementById("transferPopup").style.display = "none"; // Hide the first popup
+                document.getElementById("authPopup").style.display = "flex"; // Show the authentication popup
+            }
+        }
+    
+        // Function to close the authentication popup and the transfer popup
+        function closeAuthPopup() {
+            document.getElementById("authPopup").style.display = "none"; // Hide the authentication popup
+            document.getElementById("transferPopup").style.display = "none"; // Hide the transfer popup
+    
+            // Navigate to LandingPage.html
+            window.location.href = "LandingPage.html";
+        }
+    
+        // Function to perform the transfer
+        function performTransfer() {
+            // Get the values from the input fields in the authentication popup
+            var authCode = document.getElementById("authCode").value;
+    
+            // Check if the authentication code field is empty
+            if (authCode === "") {
+                alert("Please enter the authentication code.");
+            } else {
+                // Add your transfer logic here
+                alert("Transfer performed"); // Placeholder for demonstration
+                closeAuthPopup(); // Close the authentication popup after performing the transfer
+            }
+        }
+    
+        // Event listener to open the first popup when "Transfer" is clicked
+        document.getElementById("transferLink").addEventListener("click", openPopup);
+    </script>
+    
+</body>
+</html>

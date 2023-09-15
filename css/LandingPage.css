@@ -1,0 +1,173 @@
+/* Existing CSS styles */
+
+/* Style the Transfer link */
+.popup a#transferLink,
+.popup a#authLink,
+.white-link {
+    text-decoration: none !important; /* Remove underline */
+    color: white !important; /* Change font color to white */
+}
+
+/* Continue with your existing CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: red; /* Change navbar background color to red */
+            color: white;
+            padding: 10px;
+            position: fixed; /* Fixed at the top of the page */
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex; /* Use flexbox to align items horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .navbar .logo-container {
+            flex-grow: 1; /* Allows the logo to take available space */
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            width: 150px; /* Adjust the width of the logo as needed */
+            height: 50px; /* Adjust the height of the logo as needed */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute; /* Position absolutely within the navbar */
+            left: 6cm; /* Adjust the left padding as needed */
+        }
+
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: red; /* Change color to red */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu {
+            background-color: red; /* Change menu background color to red */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed; /* Fixed at the bottom of the page */
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex; /* Use flexbox to align items horizontally */
+            justify-content: center; /* Center horizontally */
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 60px; /* Add margin to content to prevent overlapping with menu */
+        }
+
+        .popup-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
+            z-index: 9999; /* Ensure the popup is on top */
+        }
+
+        .popup {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px; /* Adjust the width as needed */
+            text-align: center;
+        }
+
+        .popup h2 {
+            margin-bottom: 20px;
+        }
+
+        .popup input {
+            width: 6cm;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Style the Transfer link */
+        .popup #tfLink {
+            text-decoration: none; /* Remove underline */
+            color: red; /* Change link color to red */
+        }
+
+        .popup #auth-Link {
+            text-decoration: none; /* Remove underline */
+            color: red; /* Change link color to red */
+        }
+
+        .popup button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+         /* Add this CSS to style the Transfer link */
+         .white-link {
+            text-decoration: none; /* Remove underline */
+            color: white !important; /* Change font color to white */
+        }
+
+        .profile-image {
+            width: 100px; /* Adjust the width and height as needed */
+            height: 100px;
+            border-radius: 50%; /* Creates a circular shape */
+            object-fit: cover; /* Ensures the image fills the circular space */
+        }
+        
