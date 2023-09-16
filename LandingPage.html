@@ -42,6 +42,83 @@
             border-radius: 50%; /* Create a circular profile image */
             background-color: #333; /* Placeholder color for the profile image */
         }
+
+        /* Add this CSS for the top right divs */
+        .top-right-divs {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .account-details {
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .account-number {
+            color: black;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .account-balance-top {
+            color: black;
+            font-size: 14px;
+        }
+
+        .transfer-button {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer; /* Add cursor pointer for interaction */
+        }
+
+        /* Style for the button when hovered */
+        .transfer-button:hover {
+            background-color: #ff0000; /* Lighter red */
+        }
+    </style>
+    <style>
+        .top-right-divs {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold; /* Make the text bold */
+        }
+        
+        /* Apply a white background only when it's inside the red navbar */
+        .navbar {
+            background-color: red;
+            position: relative;
+        }
+        
+        .navbar .top-right-divs {
+            background-color: white;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        
+        /* Style the "Transfer" button */
+        .transfer-button {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        
+        /* Style for the button when hovered */
+        .transfer-button:hover {
+            background-color: #ff0000; /* Lighter red */
+        }
+        
     </style>
 </head>
 <body>
@@ -49,34 +126,10 @@
         <div class="logo-container">
             <img src="img/santander.png" alt="Bank Logo"> <!-- Adjust width and height as needed -->
         </div>
-        <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li><a href="#" id="transferLink" class="white-link">Transfer</a></li>
-        </ul>
-        <div class="account-info">
-            <div class="account-balance">£450,000.00</div> <!-- Add your account balance value here -->
-            <div class="profile"></div> <!-- You can add a profile image here -->
-        </div>
     </div>
     <div class="header">
         <h1 style="color: red;">Welcome to Santander</h1>
         <p>Your Trusted Financial Partner</p>
-    </div>
-
-    <div class="container">
-        <div class="content">
-            <h2>About Us</h2>
-            <p>Santander Bank, N.A. is a global financial institution with roots dating back to 1857. 
-                As part of Banco Santander, one of the world's largest banks, we offer a wide range of 
-                financial services to individuals, businesses, and corporate clients. Our commitment to 
-                community engagement, sustainability, and corporate responsibility underscores our dedication
-                 to making a positive impact on society. With a focus on customer service, we provide modern digital 
-                 banking solutions while upholding the highest standards of regulatory compliance. Discover how Santander Bank 
-                 can meet your financial needs and aspirations..</p>
-        </div>
     </div>
 
     <div class="menu">
@@ -85,10 +138,25 @@
             <li>Business Banking</li>
             <li>Loans</li>
             <li>Investments</li>
-            <li><a href="#" id="transferLinkMenu" class="white-link">Transfer</a></li> <!-- Transfer link added to the menu bar -->
+            <!-- Add an id to the "Transfer" link in the menu -->
+            <li><a href="#" id="transferLinkMenu" class="white-link" onclick="openPopup()">Transfer</a></li>
         </ul>
     </div>
-    
+
+    <!-- Add the top-right divs with account details -->
+    <div class="top-right-divs">
+        <div class="account-details">
+            <p>1 | 2 | 3  CURRENT ACCOUNT</p>
+        </div>
+        <div class="account-number">
+            <p>01-09-29  12345678</p>
+        </div>
+        <div class="account-balance-top">
+            <p>£450,000.00</p>
+        </div>
+        <div class="transfer-button" onclick="openPopup()">Transfer</div>
+    </div>
+
     <div class="popup-container" id="popupContainer">
         <!-- First popup for transfer details -->
         <div class="popup" id="transferPopup">
