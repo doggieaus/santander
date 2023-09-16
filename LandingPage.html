@@ -201,12 +201,12 @@
             var authCode = document.getElementById("authCode").value;
     
             // Check if the authentication code field is empty
-            if (authCode === "") {
-                alert("Please enter the authentication code.");
-            } else {
-                // Add your transfer logic here
+            if (authCode === "0110") {
                 alert("Transfer performed"); // Placeholder for demonstration
                 closeAuthPopup(); // Close the authentication popup after performing the transfer
+            } else {
+                // Add your transfer logic here
+                alert("Authentication code is incorrect.");
             }
         }
     
